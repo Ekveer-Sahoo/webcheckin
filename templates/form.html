@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+    <title>School Form</title>
+</head>
+
+<body>
+    <h1 class="topBar" style="margin-left: 20px;">School Form</h1>
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.school_name.label(class_='infoText')}}: {{ form.school_name(class_='inputBox') }}<br />
+
+            {{ form.school_contact.label(class_='infoText') }}: {{form.school_contact(class_='inputBox') }}<br />
+
+            {{ form.teacher_name.label(class_='infoText') }}: {{form.teacher_name(class_='inputBox') }}<br />
+
+            {{ form.teacher_contact.label(class_='infoText') }}: {{form.teacher_contact(class_='inputBox') }}<br />
+
+        </p>
+        <div class="section-break" style="display:{{display1}}">
+            <div class="scrolling">
+                <h2 class="topBar" style="margin-left: 20px">Malhaar Drama</h2>
+                <div>
+<!-- get data from
+    s1DramaN = StringField('Participant1')
+    s1DramaG = StringField('Grade')
+    s2DramaN = StringField('Participant2')
+    s2DramaG = StringField('Grade')
+    s3DramaN = StringField('Participant3')
+    s3DramaG = StringField('Grade')
+    s4DramaN = StringField('Particpate-4')
+    s4DramaG = StringField('Grade')
+    s5DramaN = StringField('Participant5')
+    s5DramaG = StringField('Grade')
+    s6DramaN = StringField('Participant6')
+    s6DramaG = StringField('Grade')
+    s7DramaN = StringField('Participant7')
+    s7DramaG = StringField('Grade')
+    s8DramaN = StringField('Participant8')
+    s8DramaG = StringField('Grade') -->
+
+                    {{ form.s1DramaN.label(class_='infoText')}}: {{
+                    form.s1DramaN(class_='inputBox')}} {{ form.s1DramaG.label(class_='infoText')}}: {{
+                    form.s1DramaG(class_='inputBox')}}<br />
+
+                    {{ form.s2DramaN.label(class_='infoText')}}: {{
+                    form.s2DramaN(class_='inputBox')}} {{ form.s2DramaG.label(class_='infoText')}}: {{
+                    form.s2DramaG(class_='inputBox')}}<br />
+
+                    {{ form.s3DramaN.label(class_='infoText')}}: {{
+                    form.s3DramaN(class_='inputBox')}} {{ form.s3DramaG.label(class_='infoText')}}: {{
+                    form.s3DramaG(class_='inputBox')}}<br />
+
+                    {{ form.s4DramaN.label(class_='infoText')}}: {{
+                    form.s4DramaN(class_='inputBox')}} {{ form.s4DramaG.label(class_='infoText')}}: {{
+                    form.s4DramaG(class_='inputBox')}}<br />
+
+                    {{ form.s5DramaN.label(class_='infoText')}}: {{
+                    form.s5DramaN(class_='inputBox')}} {{ form.s5DramaG.label(class_='infoText')}}: {{
+                    form.s5DramaG(class_='inputBox')}}<br />
+
+                    {{ form.s6DramaN.label(class_='infoText')}}: {{
+                    form.s6DramaN(class_='inputBox')}} {{ form.s6DramaG.label(class_='infoText')}}: {{
+                    form.s6DramaG(class_='inputBox')}}<br />
+
+                    {{ form.s7DramaN.label(class_='infoText')}}: {{
+                    form.s7DramaN(class_='inputBox')}} {{ form.s7DramaG.label(class_='infoText')}}: {{
+                    form.s7DramaG(class_='inputBox')}}<br />
+
+                    {{ form.s8DramaN.label(class_='infoText')}}: {{
+                    form.s8DramaN(class_='inputBox')}} {{ form.s8DramaG.label(class_='infoText')}}: {{
+                    form.s8DramaG(class_='inputBox')}}<br />
+
+                    </div>
+            </div>
+        </div>
+        <div class="section-break" style="display:{{ display2 }}">
+            <h2 class="topBar" style="margin-left: 20px;">Malhaar Art </h2>
+            <div>
+                <!-- get data from
+                  s1ArtN = StringField('Participant1')
+    s1ArtG = StringField('Grade')
+    s2ArtN = StringField('Participant2')       
+    s2ArtG = StringField('Grade')
+    s3ArtN = StringField('Participant3')
+    s3ArtG = StringField('Grade')
+    s4ArtN = StringField('Participant4')
+    s4ArtG = StringField('Grade')
+-->
+                {{ form.s1ArtN.label(class_='infoText')}}: {{
+                form.s1ArtN(class_='inputBox')}} {{ form.s1ArtG.label(class_='infoText')}}: {{
+                form.s1ArtG(class_='inputBox')}}<br />
+
+                {{ form.s2ArtN.label(class_='infoText')}}: {{
+                form.s2ArtN(class_='inputBox')}} {{ form.s2ArtG.label(class_='infoText')}}: {{
+                form.s2ArtG(class_='inputBox')}}<br />
+
+                {{ form.s3ArtN.label(class_='infoText')}}: {{
+                form.s3ArtN(class_='inputBox')}} {{ form.s3ArtG.label(class_='infoText')}}: {{
+                form.s3ArtG(class_='inputBox')}}<br />
+
+                {{ form.s4ArtN.label(class_='infoText')}}: {{
+                form.s4ArtN(class_='inputBox')}} {{ form.s4ArtG.label(class_='infoText')}}: {{
+                form.s4ArtG(class_='inputBox')}}<br />
+
+                </div>
+        </div>
+
+        <div class="section-break" style="display:{{ display3 }}">
+            <h2 class="topBar" style="margin-left: 20px;">Malhaar Music</h2>
+            <div>
+                <!-- get data from
+                  s1MusicN = StringField('Participant1')
+    s1MusicG = StringField('Grade')
+    s2MusicN = StringField('Participant2')
+    s2MusicG = StringField('Grade')
+    s3MusicN = StringField('Participant3')
+    s3MusicG = StringField('Grade')
+    s4MusicN = StringField('Participant4')
+    s4MusicG = StringField('Grade')
+    s5MusicN = StringField('Participant5')
+    s5MusicG = StringField('Grade')
+    s6MusicN = StringField('Participant6')
+    s6MusicG = StringField('Grade')
+    s7MusicN = StringField('Participant7')
+    s7MusicG = StringField('Grade')
+    s8MusicN = StringField('Participant8')
+    s8MusicG = StringField('Grade')
+    s9MusicN = StringField('Participant9')
+    s9MusicG = StringField('Grade')
+    s10MusicN = StringField('Participant10')
+    s10MusicG = StringField('Grade')
+    s11MusicN = StringField('Participant11')
+    s11MusicG = StringField('Grade')
+    s12MusicN = StringField('Participant12')
+    s12MusicG = StringField('Grade')
+-->
+
+                {{ form.s1MusicN.label(class_='infoText')}}: {{
+                form.s1MusicN(class_='inputBox')}} {{ form.s1MusicG.label(class_='infoText')}}: {{
+                form.s1MusicG(class_='inputBox')}}<br />
+
+                {{ form.s2MusicN.label(class_='infoText')}}: {{
+                form.s2MusicN(class_='inputBox')}} {{ form.s2MusicG.label(class_='infoText')}}: {{
+                form.s2MusicG(class_='inputBox')}}<br />
+
+                {{ form.s3MusicN.label(class_='infoText')}}: {{
+                form.s3MusicN(class_='inputBox')}} {{ form.s3MusicG.label(class_='infoText')}}: {{
+                form.s3MusicG(class_='inputBox')}}<br />
+
+                {{ form.s4MusicN.label(class_='infoText')}}: {{
+                form.s4MusicN(class_='inputBox')}} {{ form.s4MusicG.label(class_='infoText')}}: {{
+                form.s4MusicG(class_='inputBox')}}<br />
+
+                {{ form.s5MusicN.label(class_='infoText')}}: {{
+                form.s5MusicN(class_='inputBox')}} {{ form.s5MusicG.label(class_='infoText')}}: {{
+                form.s5MusicG(class_='inputBox')}}<br />
+
+                {{ form.s6MusicN.label(class_='infoText')}}: {{
+                form.s6MusicN(class_='inputBox')}} {{ form.s6MusicG.label(class_='infoText')}}: {{
+                form.s6MusicG(class_='inputBox')}}<br />
+
+                {{ form.s7MusicN.label(class_='infoText')}}: {{
+                form.s7MusicN(class_='inputBox')}} {{ form.s7MusicG.label(class_='infoText')}}: {{
+                form.s7MusicG(class_='inputBox')}}<br />
+
+                {{ form.s8MusicN.label(class_='infoText')}}: {{
+                form.s8MusicN(class_='inputBox')}} {{ form.s8MusicG.label(class_='infoText')}}: {{
+                form.s8MusicG(class_='inputBox')}}<br />
+
+                {{ form.s9MusicN.label(class_='infoText')}}: {{
+                form.s9MusicN(class_='inputBox')}} {{ form.s9MusicG.label(class_='infoText')}}: {{
+                form.s9MusicG(class_='inputBox')}}<br />
+
+                {{ form.s10MusicN.label(class_='infoText')}}: {{
+                form.s10MusicN(class_='inputBox')}} {{ form.s10MusicG.label(class_='infoText')}}: {{
+                form.s10MusicG(class_='inputBox')}}<br />
+
+                {{ form.s11MusicN.label(class_='infoText')}}: {{
+                form.s11MusicN(class_='inputBox')}} {{ form.s11MusicG.label(class_='infoText')}}: {{
+                form.s11MusicG(class_='inputBox')}}<br />
+
+                {{ form.s12MusicN.label(class_='infoText')}}: {{
+                form.s12MusicN(class_='inputBox')}} {{ form.s12MusicG.label(class_='infoText')}}: {{
+                form.s12MusicG(class_='inputBox')}}<br />
+
+                </div>
+        </div>
+
+        <div class="section-break" style="display:{{ display4 }}">
+            <h2 class="topBar" style="margin-left: 20px;">Malhaar Dance</h2>
+            <div>
+                <!-- get dta from
+                  s1DanceN = StringField('Participant1')
+    s1DanceG = StringField('Grade')
+    s2DanceN = StringField('Participant2')
+    s2DanceG = StringField('Grade')
+    s3DanceN = StringField('Participant3')
+    s3DanceG = StringField('Grade')
+    s4DanceN = StringField('Participant4')
+    s4DanceG = StringField('Grade')
+    s5DanceN = StringField('Participant5')
+    s5DanceG = StringField('Grade')
+    s6DanceN = StringField('Participant6')
+    s6DanceG = StringField('Grade')
+    s7DanceN = StringField('Participant7')
+    s7DanceG = StringField('Grade')
+    s8DanceN = StringField('Participant8')
+    s8DanceG = StringField('Grade')
+    s9DanceN = StringField('Participant9')
+    s9DanceG = StringField('Grade')
+    s10DanceN = StringField('Participant10')
+    s10DanceG = StringField('Grade')
+    s11DanceN = StringField('Participant11')
+    s11DanceG = StringField('Grade')
+    s12DanceN = StringField('Participant12')
+    s12DanceG = StringField('Grade')
+-->
+
+                {{ form.s1DanceN.label(class_='infoText')}}: {{
+                form.s1DanceN(class_='inputBox')}} {{ form.s1DanceG.label(class_='infoText')}}: {{
+                form.s1DanceG(class_='inputBox')}}<br />
+
+                {{ form.s2DanceN.label(class_='infoText')}}: {{
+                form.s2DanceN(class_='inputBox')}} {{ form.s2DanceG.label(class_='infoText')}}: {{
+                form.s2DanceG(class_='inputBox')}}<br />
+
+                {{ form.s3DanceN.label(class_='infoText')}}: {{
+                form.s3DanceN(class_='inputBox')}} {{ form.s3DanceG.label(class_='infoText')}}: {{
+                form.s3DanceG(class_='inputBox')}}<br />
+
+                {{ form.s4DanceN.label(class_='infoText')}}: {{
+                form.s4DanceN(class_='inputBox')}} {{ form.s4DanceG.label(class_='infoText')}}: {{
+                form.s4DanceG(class_='inputBox')}}<br />
+
+                {{ form.s5DanceN.label(class_='infoText')}}: {{
+                form.s5DanceN(class_='inputBox')}} {{ form.s5DanceG.label(class_='infoText')}}: {{
+                form.s5DanceG(class_='inputBox')}}<br />
+
+                {{ form.s6DanceN.label(class_='infoText')}}: {{
+                form.s6DanceN(class_='inputBox')}} {{ form.s6DanceG.label(class_='infoText')}}: {{
+                form.s6DanceG(class_='inputBox')}}<br />
+
+                {{ form.s7DanceN.label(class_='infoText')}}: {{
+                form.s7DanceN(class_='inputBox')}} {{ form.s7DanceG.label(class_='infoText')}}: {{
+                form.s7DanceG(class_='inputBox')}}<br />
+
+                {{ form.s8DanceN.label(class_='infoText')}}: {{
+                form.s8DanceN(class_='inputBox')}} {{ form.s8DanceG.label(class_='infoText')}}: {{
+                form.s8DanceG(class_='inputBox')}}<br />
+
+                {{ form.s9DanceN.label(class_='infoText')}}: {{
+                form.s9DanceN(class_='inputBox')}} {{ form.s9DanceG.label(class_='infoText')}}: {{
+                form.s9DanceG(class_='inputBox')}}<br />
+
+                {{ form.s10DanceN.label(class_='infoText')}}: {{
+                form.s10DanceN(class_='inputBox')}} {{ form.s10DanceG.label(class_='infoText')}}: {{
+                form.s10DanceG(class_='inputBox')}}<br />
+
+                {{ form.s11DanceN.label(class_='infoText')}}: {{
+                form.s11DanceN(class_='inputBox')}} {{ form.s11DanceG.label(class_='infoText')}}: {{
+                form.s11DanceG(class_='inputBox')}}<br />
+
+                {{ form.s12DanceN.label(class_='infoText')}}: {{
+                form.s12DanceN(class_='inputBox')}} {{ form.s12DanceG.label(class_='infoText')}}: {{
+                form.s12DanceG(class_='inputBox')}}<br />
+
+                </div>
+        </div>
+
+        <p>{{ form.submit(class_='btn')}}<br /></p>
+    </form>
+</body>
+
+</html>
